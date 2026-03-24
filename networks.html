@@ -8,18 +8,18 @@
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --bg: #0e0e0f;
-  --surface: #17171a;
-  --surface2: #1e1e22;
-  --border: rgba(255,255,255,0.08);
-  --border-mid: rgba(255,255,255,0.14);
-  --text: #e8e6e0;
-  --muted: #7a7870;
-  --accent: #c8b89a;
+  --bg: #F5F0E8;
+  --surface: #EDE8DC;
+  --surface2: #E4DDD0;
+  --border: rgba(44,40,32,0.12);
+  --border-mid: rgba(44,40,32,0.22);
+  --text: #2C2820;
+  --muted: #888070;
+  --accent: #8C3A1E;
   --mono: 'DM Mono', monospace;
   --serif: 'DM Serif Display', serif;
-  --node-default: #4a4a52;
-  --edge-default: rgba(255,255,255,0.12);
+  --node-default: #A09888;
+  --edge-default: rgba(44,40,32,0.15);
 }
 html, body { background: var(--bg); color: var(--text); font-family: var(--mono); min-height: 100vh; }
 body { display: flex; flex-direction: column; align-items: center; padding: 3rem 1.5rem 4rem; }
@@ -48,7 +48,7 @@ h1 em { font-style: italic; color: var(--accent); }
 
 /* canvas area */
 .canvas-wrap {
-  position: relative; width: 100%; background: #0a0a0b;
+  position: relative; width: 100%; background: #EDE8DC;
   border: 1px solid var(--border); border-top: none; border-radius: 0 0 6px 6px;
   overflow: hidden;
 }
@@ -76,7 +76,7 @@ canvas { display: block; width: 100%; }
   background: transparent; border: none; cursor: pointer; color: var(--muted);
   letter-spacing: 0.04em; transition: background 0.12s, color 0.12s;
 }
-.tog.active { background: var(--accent); color: #0e0e0f; }
+.tog.active { background: var(--accent); color: #F5F0E8; }
 .sl-group { display: flex; align-items: center; gap: 7px; flex: 1; min-width: 160px; }
 .sl-label { font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
 .sl-val { font-size: 11px; font-weight: 500; min-width: 42px; color: var(--accent); text-align: right; white-space: nowrap; }
@@ -121,7 +121,7 @@ input[type=range]::-moz-range-thumb { width: 13px; height: 13px; border-radius: 
 .ssc-block h2 { font-family: var(--serif); font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 400; }
 .ssc-block h2 em { font-style: italic; color: var(--accent); }
 .ssc-block p { font-size: 13.5px; line-height: 1.8; color: var(--muted); max-width: 64ch; }
-.ssc-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 0.4rem; padding: 8px 18px; font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: #0e0e0f; background: var(--accent); border-radius: 4px; transition: opacity 0.15s; align-self: flex-start; }
+.ssc-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 0.4rem; padding: 8px 18px; font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: #F5F0E8; background: var(--accent); border-radius: 4px; transition: opacity 0.15s; align-self: flex-start; }
 .ssc-link:hover { opacity: 0.85; }
 footer { margin-top: 2rem; font-size: 11px; letter-spacing: 0.08em; color: var(--muted); text-align: center; }
 footer a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
@@ -168,8 +168,8 @@ footer a { color: var(--muted); text-decoration: underline; text-underline-offse
     <div class="info-row">
       <div class="info-text" id="topo-info">Select a topology above.</div>
       <div class="legend" id="topo-legend">
-        <div class="leg-item"><div class="leg-dot" style="background:#c8b89a"></div>hub (&gt;avg degree)</div>
-        <div class="leg-item"><div class="leg-dot" style="background:#4a4a52"></div>regular node</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#8C3A1E"></div>hub (&gt;avg degree)</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#A09888"></div>regular node</div>
       </div>
     </div>
     <div class="explainer">
@@ -215,7 +215,7 @@ footer a { color: var(--muted); text-decoration: underline; text-underline-offse
       <div class="legend">
         <div class="leg-item"><div class="leg-dot" style="background:#e07a5f"></div>infected</div>
         <div class="leg-item"><div class="leg-dot" style="background:#81b29a"></div>recovered</div>
-        <div class="leg-item"><div class="leg-dot" style="background:#4a4a52"></div>susceptible</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#A09888"></div>susceptible</div>
       </div>
     </div>
     <div class="explainer">
@@ -249,7 +249,7 @@ footer a { color: var(--muted); text-decoration: underline; text-underline-offse
       <div class="legend">
         <div class="leg-item"><div class="leg-dot" style="background:#e07a5f"></div>high centrality</div>
         <div class="leg-item"><div class="leg-dot" style="background:#85b7eb"></div>medium</div>
-        <div class="leg-item"><div class="leg-dot" style="background:#4a4a52"></div>low</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#A09888"></div>low</div>
       </div>
     </div>
     <div class="explainer">
@@ -286,7 +286,7 @@ footer a { color: var(--muted); text-decoration: underline; text-underline-offse
         <div class="leg-item"><div class="leg-dot" style="background:#e07a5f"></div>cluster A</div>
         <div class="leg-item"><div class="leg-dot" style="background:#6fa3d0"></div>cluster B</div>
         <div class="leg-item"><div class="leg-dot" style="background:#81b29a"></div>cluster C</div>
-        <div class="leg-item"><div class="leg-dot" style="background:#c8b89a; width:24px; height:2px; border-radius:0;"></div>weak tie</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#8C3A1E; width:24px; height:2px; border-radius:0;"></div>weak tie</div>
       </div>
     </div>
     <div class="explainer">
@@ -326,7 +326,7 @@ footer a { color: var(--muted); text-decoration: underline; text-underline-offse
     <div class="info-row">
       <div class="info-text">Each node adopts when enough of its neighbours have. Node colour shows threshold — <span style="color:#6fa3d0">blue = easy to convince</span>, <span style="color:#e07a5f">red = hard to convince</span>. <span id="cas-stats" style="color:var(--accent)"></span></div>
       <div class="legend">
-        <div class="leg-item"><div class="leg-dot" style="background:#c8b89a"></div>adopted</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#8C3A1E"></div>adopted</div>
         <div class="leg-item"><div class="leg-dot" style="background:#6fa3d0"></div>low threshold</div>
         <div class="leg-item"><div class="leg-dot" style="background:#e8c84a"></div>medium</div>
         <div class="leg-item"><div class="leg-dot" style="background:#e07a5f"></div>high threshold</div>
@@ -433,7 +433,7 @@ function drawNode(ctx, n, color, r, label) {
   ctx.fillStyle = color; ctx.fill();
   if (label) {
     ctx.font = `500 9px 'DM Mono', monospace`;
-    ctx.fillStyle = 'rgba(200,184,154,0.6)';
+    ctx.fillStyle = 'rgba(44,40,32,0.5)';
     ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
     ctx.fillText(label, n.x, n.y);
   }
@@ -631,10 +631,10 @@ function initTopo() {
 function renderTopo() {
   const { ctx, nodes, edges } = { ctx: topoCtx, ...topoG };
   topoCtx.clearRect(0, 0, topoW, topoH);
-  for (const [a, b] of edges) drawEdge(topoCtx, nodes[a], nodes[b], 'rgba(255,255,255,0.1)', 1, false);
+  for (const [a, b] of edges) drawEdge(topoCtx, nodes[a], nodes[b], 'rgba(44,40,32,0.15)', 1, false);
   for (const n of nodes) {
     const r = n.isHub ? 9 : 5;
-    const col = n.isHub ? '#c8b89a' : '#4a4a52';
+    const col = n.isHub ? '#8C3A1E' : '#A09888';
     drawNode(topoCtx, n, col, r);
   }
 }
@@ -726,9 +726,9 @@ function renderDiff() {
   if (!diffG) return;
   diffCtx.clearRect(0, 0, diffW, diffH);
   const { nodes, edges } = diffG;
-  for (const [a, b] of edges) drawEdge(diffCtx, nodes[a], nodes[b], 'rgba(255,255,255,0.08)', 1, false);
+  for (const [a, b] of edges) drawEdge(diffCtx, nodes[a], nodes[b], 'rgba(44,40,32,0.12)', 1, false);
   for (const n of nodes) {
-    const col = n.state === I ? '#e07a5f' : n.state === R ? '#81b29a' : '#4a4a52';
+    const col = n.state === I ? '#e07a5f' : n.state === R ? '#81b29a' : '#A09888';
     const r = 5 + (diffG.deg[n.id] || 0) * 0.6;
     drawNode(diffCtx, n, col, Math.min(r, 14));
     if (n.state === I) {
@@ -844,7 +844,7 @@ function renderCent() {
   if (!centG) return;
   centCtx.clearRect(0, 0, centW, centH);
   const { nodes, edges } = centG;
-  for (const [a, b] of edges) drawEdge(centCtx, nodes[a], nodes[b], 'rgba(255,255,255,0.1)', 1, false);
+  for (const [a, b] of edges) drawEdge(centCtx, nodes[a], nodes[b], 'rgba(44,40,32,0.15)', 1, false);
   const lo = [74, 74, 82], hi = [224, 122, 95], mid = [133, 183, 235];
   for (let i = 0; i < nodes.length; i++) {
     const score = centScores[i][centMeasure];
@@ -953,17 +953,17 @@ function renderWT() {
   wtCtx.clearRect(0, 0, wtW, wtH);
   const { nodes, edges } = wtG;
   for (const [a, b, isBridge] of edges) {
-    const col = isBridge ? 'rgba(200,184,154,0.35)' : 'rgba(255,255,255,0.1)';
+    const col = isBridge ? 'rgba(44,40,32,0.3)' : 'rgba(44,40,32,0.15)';
     drawEdge(wtCtx, nodes[a], nodes[b], col, isBridge ? 1.2 : 0.8, isBridge);
   }
   for (const n of nodes) {
     const baseCol = n.color;
-    const col = n.state === 1 ? '#c8b89a' : baseCol;
+    const col = n.state === 1 ? '#8C3A1E' : baseCol;
     const r = n.state === 1 ? 8 : 6;
     drawNode(wtCtx, n, col, r);
     if (n.state === 1) {
       wtCtx.beginPath(); wtCtx.arc(n.x, n.y, r+4, 0, TAU);
-      wtCtx.strokeStyle = 'rgba(200,184,154,0.25)'; wtCtx.lineWidth=1; wtCtx.stroke();
+      wtCtx.strokeStyle = 'rgba(44,40,32,0.2)'; wtCtx.lineWidth=1; wtCtx.stroke();
     }
   }
 }
@@ -1081,17 +1081,17 @@ function renderCascade() {
   if (!casG) return;
   casCtx.clearRect(0, 0, casW, casH);
   const { nodes, edges } = casG;
-  for (const [a,b] of edges) drawEdge(casCtx, nodes[a], nodes[b], 'rgba(255,255,255,0.09)', 1, false);
+  for (const [a,b] of edges) drawEdge(casCtx, nodes[a], nodes[b], 'rgba(44,40,32,0.13)', 1, false);
   for (const n of nodes) {
     if (n.adopted) {
-      drawNode(casCtx, n, '#c8b89a', 8);
+      drawNode(casCtx, n, '#8C3A1E', 8);
       if (n.adoptedAt >= 0) {
         const age = casStepCount - n.adoptedAt;
         if (age < 30) {
           const alpha = (1 - age / 30) * 0.5;
           const pr = Math.max(0, 8 + age * 0.8);
           casCtx.beginPath(); casCtx.arc(n.x, n.y, pr, 0, TAU);
-          casCtx.strokeStyle = `rgba(200,184,154,${alpha})`; casCtx.lineWidth = 1.5; casCtx.stroke();
+          casCtx.strokeStyle = `rgba(140,58,30,${alpha})`; casCtx.lineWidth = 1.5; casCtx.stroke();
         }
       }
     } else {
@@ -1108,7 +1108,7 @@ function renderCascade() {
         if (pressure > 0) {
           const pr = Math.max(0, 6 + pressure * 8);
           casCtx.beginPath(); casCtx.arc(n.x, n.y, pr, 0, TAU);
-          casCtx.strokeStyle = `rgba(200,184,154,${pressure * 0.4})`; casCtx.lineWidth = 1; casCtx.stroke();
+          casCtx.strokeStyle = `rgba(140,58,30,${pressure * 0.4})`; casCtx.lineWidth = 1; casCtx.stroke();
         }
       }
     }
